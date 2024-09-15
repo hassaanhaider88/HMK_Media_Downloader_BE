@@ -1,18 +1,15 @@
 require('dotenv').config();
-
 const express = require('express');
 var YTRouter = require('./routes/youtubeRouter.js');
-// var FSRouter  = require('./routes/fsRouter.js');
 var TWTRouter = require('./routes/twiterRouter.js');
 var TTRouter = require('./routes/tiktokRouter.js');
 var InstagramRouter = require('./routes/Instagram.js')
 var FaceBookRouter = require('./routes/faceBook.js');
-// var dotnev = require('dotenv');
 
 const cors = require('cors');
 
 const app = express();
-const Port = process.env.PORT;
+const Port = process.env.PORT || 3000;
 app.use(cors());
 
 app.set('view engine', 'ejs');
@@ -39,3 +36,4 @@ app.listen(Port, () => {
 
 
 
+module.exports = app;

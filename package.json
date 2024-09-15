@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +29,7 @@
     "snapsave-media-downloader": "^1.0.7",
     "social-downloader-cherry": "^1.0.0",
     "undici": "^6.19.8",
+    "vercel": "^37.4.2",
     "videos-downloader": "^1.0.4",
     "youtube-ext": "^1.1.25",
     "ytdl-core": "^4.11.5"
