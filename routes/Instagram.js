@@ -1,6 +1,8 @@
-var express = require('express');
+import express  from 'express';
 var router = express.Router();
-const { likee} = require("nayan-media-downloader");
+import pkg from 'nayan-media-downloader';
+const { likee }  = pkg;
+// import from "nayan-media-downloader";
 
 router.post('/',async (req,res)=>{
 try {
@@ -13,5 +15,5 @@ try {
 }
 })
 
-module.exports = router;
+export default  router;
 

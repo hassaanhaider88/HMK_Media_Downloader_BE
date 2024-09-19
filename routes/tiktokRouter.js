@@ -1,7 +1,6 @@
-var express = require('express');
+import express  from 'express';
 var router = express.Router();
-const { tikdown } = require("nayan-media-downloader")
-const { ttdl } = require('btch-downloader') 
+import { ttdl } from 'btch-downloader';
 
 router.post('/',async (req,res)=>{
   try {
@@ -13,4 +12,4 @@ res.status(200).json(data)
   }
 })
 
-module.exports = router;
+export default  router;

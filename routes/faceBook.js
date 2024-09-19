@@ -1,6 +1,6 @@
-var express = require('express');
+import express  from 'express';
 var router = express.Router();
-const { fbdown } = require('btch-downloader')
+import { fbdown } from 'btch-downloader';
 
 router.post('/',async (req,res)=>{
   console.log(req.body.url)
@@ -13,4 +13,5 @@ router.post('/',async (req,res)=>{
   }
 })
 
-module.exports = router;
+export default  router;
+// module.exports = router;
