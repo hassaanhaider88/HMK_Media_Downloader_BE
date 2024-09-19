@@ -4,7 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
+    "build": "netlify-lambda build",
+    "start": "netlify dev",
     "dev": "node index.js"
   },
   "keywords": [],
@@ -28,6 +29,10 @@
     "metadownloader": "^1.0.0",
     "miniget": "^4.2.3",
     "nayan-media-downloader": "^2.4.9",
+    "netlify": "^13.1.21",
+    "netlify-cli": "^17.36.0",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0",
     "snapsave-media-downloader": "^1.0.7",
     "social-downloader-cherry": "^1.0.0",
     "undici": "^6.19.8",

@@ -1,10 +1,12 @@
 import dotenv from 'dotenv';
 import express  from 'express';
-import YTRouter  from './routes/youtubeRouter.js';
-import TWTRouter  from './routes/twiterRouter.js';
-import TTRouter  from './routes/tiktokRouter.js';
-import InstagramRouter  from './routes/Instagram.js';
-import FaceBookRouter  from './routes/faceBook.js';
+import serverless from 'serverless-http';
+import YTRouter  from '../routes/youtubeRouter.js';
+import TWTRouter  from '../routes/twiterRouter.js';
+import TTRouter  from '../routes/tiktokRouter.js';
+import InstagramRouter  from '../routes/Instagram.js';
+import FaceBookRouter  from '../routes/faceBook.js';
+
 import cors  from 'cors';
 dotenv.config()
 const app = express();
@@ -23,5 +25,5 @@ app.use('/api/facebook',FaceBookRouter)
 // app.listen(Port, () => {
 //   console.log(`Server is running on http://localhost:${Port}`);
 // });
-export default app;
+export default serverless(app);
 // module.exports = app;
