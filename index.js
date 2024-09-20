@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import express  from 'express';
-// import serverless from 'serverless-http';
+import serverless from 'serverless-http';
 import YTRouter  from './routes/youtubeRouter.js';
 import TWTRouter  from './routes/twiterRouter.js';
 import TTRouter  from './routes/tiktokRouter.js';
@@ -22,8 +22,7 @@ app.use('/api/youtube', YTRouter); //https://www.youtube.com/watch?v=0HuOyleXVwk
 app.use('/api/twitter',TWTRouter);
 app.use('/api/instagram',InstagramRouter);
 app.use('/api/facebook',FaceBookRouter)
-app.listen(Port, () => {
-  console.log(`Server is running on http://localhost:${Port}`);
-});
-export default app;
-// module.exports = app;
+// app.listen(Port, () => {
+//   console.log(`Server is running on http://localhost:${Port}`);
+// });
+export default serverless(app);
