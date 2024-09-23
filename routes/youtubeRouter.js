@@ -1,7 +1,7 @@
-import express  from 'express';
+let express  = require('express');
 var router = express.Router();
-import pkg from 'nayan-media-downloader';
-const { ytdown } = pkg;
+
+const { ytdown } = require('nayan-media-downloader');
 
 router.post('/' ,async (req,res)=>{
   try {
@@ -13,4 +13,4 @@ res.status(500).json({mes:'something went wrong...'})
 
 })
 
-export default  router;
+module.exports = router;

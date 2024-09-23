@@ -1,6 +1,6 @@
-import express  from 'express';
+let express  = require('express');
 var router = express.Router();
-import { ttdl } from 'btch-downloader';
+let { ttdl } = require('btch-downloader');
 
 router.post('/',async (req,res)=>{
   try {
@@ -12,4 +12,4 @@ res.status(200).json(data)
   }
 })
 
-export default  router;
+module.exports = router;
